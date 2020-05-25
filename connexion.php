@@ -3,7 +3,8 @@
 <html>
 
 <head>
-	<title>Moduleconnexion</title>
+    <title>Module-connexion/Connexion</title>
+    <meta sharset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -35,13 +36,15 @@
     <?php
 
 $cnx = mysqli_connect("localhost", "root", "", "moduleconnexion");
+
 session_start();
+
 
 if (isset($_SESSION["login"]))
 {
 ?>
 
-    <p>Bonjour <?php echo $_SESSION ?> vous êtes dejà connecté donc dejà inscrit.<br></p>
+    <p>Bonjour <?php echo $_SESSION['login'] ?> vous êtes dejà connecté donc dejà inscrit.<br></p>
 
     <form action="index.php" method="post">
         <input class="mybutton" name="deco" value="Deconnexion" type="submit"/>
@@ -52,15 +55,16 @@ if (isset($_SESSION["login"]))
 
     if ((!isset($_POST["login"]) || !isset($_POST["password"])) && (!isset($_SESSION["login"]))) 
     {
+      
     ?>
 
-        <form action="connexion.php" metho="post" id="form_connect">
+        <form action="connexion.php" method="post" id="form_connect">
 
         <label>Login</label>
-        <input type="text" name="login">
+        <input type="text" name="login" required>
 
         <label>Password</label>
-        <input type="text" name="password">
+        <input type="text" name="password" required>
 
         <input class="mybutton" type="submit" value="Connexion" name="valider">
 
@@ -71,9 +75,11 @@ if (isset($_SESSION["login"]))
 
 if (isset($_POST['login']) && isset($_POST['password'])) 
 {   
+    
     $requete2 = "SELECT * FROM utilisateurs WHERE login ='" . $_POST['login'] . "'";
     $query2 = mysqli_query($cnx, $requete2);
     $resultat = mysqli_fetch_array($query2);
+
 
     if (!empty($resultat)) 
     {
@@ -88,13 +94,13 @@ if (isset($_POST['login']) && isset($_POST['password']))
 ?>
         <p>Vôtre mot de passe est incorrect</p>
 
-        <form action="connexion.php" metho="post" class="formulaire">
+        <form action="connexion.php" method="post" class="formulaire">
 
         <label>Login</label>
-        <input type="text" name="login">
+        <input type="text" name="login" required>
 
         <label>Password</label>
-        <input type="text" name="password">
+        <input type="text" name="password" required>
 
         <input class="mybutton" type="submit" value="Connexion" name="valider">
 
@@ -108,13 +114,13 @@ if (isset($_POST['login']) && isset($_POST['password']))
 
         <p>Votre nom d'utilisateur n'est pas valide</p>
 
-        <form action="connexion.php" metho="post" class="formulaire">
+        <form action="connexion.php" method="post" class="formulaire">
 
         <label>Login</label>
-        <input type="text" name="login">
+        <input type="text" name="login" required>
 
         <label>Password</label>
-        <input type="text" name="password">
+        <input type="text" name="password" required>
 
         <input class="mybutton" type="submit" value="Connexion" name="valider">
 

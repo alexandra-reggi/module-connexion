@@ -5,7 +5,8 @@
 <html>
 
 <head>
-	<title>Moduleconnexion</title>
+    <title>Module-connexion/Inscription</title>
+    <meta sharset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -34,7 +35,7 @@
     {
     ?>
 
-        <p>Bonjour <?php echo $_SESSION ?> vous êtes dejà connecté donc dejà inscrit.<br></p>
+        <p>Bonjour <?php echo $_SESSION['login'] ?> vous êtes dejà connecté donc dejà inscrit.<br></p>
 
         <form action="index.php" method="post">
             <input class="mybutton" name="deco" value="Deconnexion" type="submit"/>
@@ -50,22 +51,22 @@
                 <img id="imginscript" src= "images/subscribe.png">
             </article>
 
-                <form action="inscription.php" metho="post" id="form_inscript">
+               <form method="post" id="form_inscript">
 
                     <label>Login</label>
-                    <input type="text" name="login">
+                    <input type="text" name="login" required>
 
                     <label>Prénom</label>
-                    <input type="text" name="prenom">
+                    <input type="text" name="prenom" required>
 
                     <label>Nom</label>
-                    <input type="text" name="nom">
+                    <input type="text" name="nom" required>
 
                     <label>Password</label>
-                    <input type="password" name=mdp>
+                    <input type="password" name="mdp" required>
 
                     <label>Password confirmation</label>
-                    <input type="password" name="mdpval">
+                    <input type="password" name="mdpval" required>
 
                     <input class="mybutton" type="submit" value="S'INSCRIRE" name="valider">
 
@@ -98,8 +99,9 @@
 
             else
             {
-                $requete = "INSERT INTO utilisateur (login, prenom, nom, password) VALUE ('$login', '$prenom', '$nom', '$mdp')";
+                $requete = "INSERT INTO utilisateurs (login, prenom, nom, password) VALUE ('$login', '$prenom', '$nom', '$mdp')";
                 $query = mysqli_query($connexion, $requete);
+                header("location:connexion.php");
             }
 
             }

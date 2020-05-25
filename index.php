@@ -5,7 +5,8 @@
 <html>
 
 <head>
-	<title>Module-connexion</title>
+    <title>Module-connexion</title>
+    <meta sharset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -115,6 +116,7 @@
             {
             session_unset();
             session_destroy();
+            header('Location:index.php');
             }
         ?>
                     
