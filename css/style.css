@@ -34,6 +34,7 @@ li a:hover{
 }
 
 #main_index{
+    margin-top: -1%;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -215,19 +216,6 @@ li a:hover{
     margin-left: -26%;
 }
 
-input{
-    height: 10px;
-    width: 160px;
-    margin-left: 5%;
-	border: dotted;
-    padding: 10px 20px;
-    margin: 10px;
-}
-
-input:focus{
-	outline:none;
-}
-
 .mybutton_inscription{
     height: 37px;
     width: 143px;
@@ -244,13 +232,21 @@ input:focus{
     font-family: sans-serif;
 }
 
-input{
+.input_inscription{
+    height: 10px;
+    width: 160px;
+    margin-left: 5%;
     border: dotted;
     padding: 10px 20px;
     margin: 10px;
 }
 
+input:focus{
+	outline:none;
+}
+
 #foot_inscript{
+    margin-top: 1%;
     background-color: cadetblue;
     box-shadow: 0px 9px 11px black;
     border: solid 1px;
@@ -341,17 +337,22 @@ li a:hover{
     flex-direction: column;
     text-align: center;
     font-size: 28px;
-    width: 20%;
+    width: 13%;
     border-radius: 50px;
     padding: 15px;
     margin-left: 284px;
     margin-top: 12%;
 }
 
-input {
+.input_connexion {
     border: dotted;
     padding: 10px 20px;
     margin: 10px;
+}
+
+.label_connexion{
+    
+    margin-left: -26%;
 }
 
 .mybutton_connexion {
@@ -434,12 +435,11 @@ li a:hover{
     flex-grow:1;
 }
 
-
-#profil_ID{
-
+h3{
+    margin-top: 91%;
 }
-
 #section_profil_gauche{
+    margin-top: 1%;
     display: flex;
     flex-direction: row;
 }
@@ -536,6 +536,67 @@ li a:hover{
 }
 
 #foot_profil{
+    margin-top: 9%;
+    background-color: cadetblue;
+    box-shadow: 0px 9px 11px black;
+    border: solid 1px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+	justify-content: space-around; 
+}
+
+/*---------------ADMIN-------------*/
+
+
+body{
+    background-color: bisque;
+    background-size: 100% 100%;
+    margin:0;  
+}
+
+header{
+    background-color: cadetblue;
+    box-shadow: 0px 9px 11px black;
+    border: solid 1px;
+    height: 75px;
+    margin: 0; 
+}
+
+ul{
+    margin-top: 23px;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li a{
+    text-shadow: 3px 3px 2px black;
+    font-size: 30px;
+    font-family: monospace;
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover{
+    zoom: 1.5;
+}
+
+#color5{
+}
+
+#colorf5{
+
+}
+
+#main_admin{
+
+}
+
+#foot_admin{
     margin-top: 9%;
     background-color: cadetblue;
     box-shadow: 0px 9px 11px black;

@@ -134,7 +134,9 @@
     } 
     else 
     {
-        echo "Veuillez vous connecter pour accéder à votre page !";
+    ?>
+        <h3>Veuillez vous connecter pour accéder à votre page !</h3>
+    <?php
     }
 
     ?>

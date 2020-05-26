@@ -60,11 +60,11 @@ if (isset($_SESSION["login"]))
 
         <form action="connexion.php" method="post" id="form_connect">
 
-        <label>Login</label>
-        <input type="text" name="login" required>
+        <label clas="label_connexion">Login</label>
+        <input class="input_connexion" type="text" name="login" required>
 
-        <label>Password</label>
-        <input type="text" name="password" required>
+        <label clas="label_connexion">Password</label>
+        <input class="input_connexion" type="text" name="password" required>
 
         <input class="mybutton_connexion" type="submit" value="Connexion" name="valider">
 
@@ -96,11 +96,11 @@ if (isset($_POST['login']) && isset($_POST['password']))
 
         <form action="connexion.php" method="post" class="formulaire">
 
-        <label>Login</label>
-        <input type="text" name="login" required>
+        <label clas="label_connexion">Login</label>
+        <input class="input_connexion" type="text" name="login" required>
 
-        <label>Password</label>
-        <input type="text" name="password" required>
+        <label clas="label_connexion">Password</label>
+        <input class="input_connexion" type="text" name="password" required>
 
         <input class="mybutton_connexion" type="submit" value="Connexion" name="valider">
 
@@ -116,11 +116,11 @@ if (isset($_POST['login']) && isset($_POST['password']))
 
         <form action="connexion.php" method="post" class="formulaire">
 
-        <label>Login</label>
-        <input type="text" name="login" required>
+        <label clas="label_connexion">Login</label>
+        <input class="input_connexion" type="text" name="login" required>
 
-        <label>Password</label>
-        <input type="text" name="password" required>
+        <label clas="label_connexion">Password</label>
+        <input class="input_connexion" type="text" name="password" required>
 
         <input class="mybutton_connexion" type="submit" value="Connexion" name="valider">
 

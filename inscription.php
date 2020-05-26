@@ -54,19 +54,19 @@
                <form method="post" id="form_inscript">
 
                     <label class="label_inscription">Login</label>
-                    <input type="text" name="login" required>
+                    <input class="input_inscription" type="text" name="login" required>
 
                     <label class="label_inscription">Prénom</label>
-                    <input type="text" name="prenom" required>
+                    <input class="input_inscription" type="text" name="prenom" required>
 
                     <label class="label_inscription">Nom</label>
-                    <input type="text" name="nom" required>
+                    <input class="input_inscription" type="text" name="nom" required>
 
                     <label class="label_inscription">Password</label>
-                    <input type="password" name="mdp" required>
+                    <input class="input_inscription" type="password" name="mdp" required>
 
                     <label class="label_inscription">Password confirmation</label>
-                    <input type="password" name="mdpval" required>
+                    <input class="input_inscription" type="password" name="mdpval" required>
 
                     <input class="mybutton_inscription" type="submit" value="S'INSCRIRE" name="valider">
 
