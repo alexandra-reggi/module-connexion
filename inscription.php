@@ -19,8 +19,8 @@
                 <li><a href= "index.php"> Accueil</a></li>
                 <li><a id="color1" href= "inscription.php"> Inscription</a></li>
                 <li><a href= "connexion.php" >Connexion</a></li>
-                <li><a href= "admin.php"> Profil</a></li>
-                <li><a href= "profil.php"> Admin</a></li>
+                <li><a href= "profil.php"> Profil</a></li>
+                <li><a href= "admin.php"> Admin</a></li>
             </ul>
         </nav>
 
@@ -35,10 +35,10 @@
     {
     ?>
 
-        <p>Bonjour <?php echo $_SESSION['login'] ?> vous êtes dejà connecté donc dejà inscrit.<br></p>
+        <p>Bonjour <?php echo $_SESSION['login'] ?> vous êtes dejà connecté.<br></p>
 
         <form action="index.php" method="post">
-            <input class="mybutton" name="deco" value="Deconnexion" type="submit"/>
+            <input class="mybutton_inscription" name="deco" value="Deconnexion" type="submit"/>
         </form>
 
         <?php
@@ -53,22 +53,22 @@
 
                <form method="post" id="form_inscript">
 
-                    <label>Login</label>
+                    <label class="label_inscription">Login</label>
                     <input type="text" name="login" required>
 
-                    <label>Prénom</label>
+                    <label class="label_inscription">Prénom</label>
                     <input type="text" name="prenom" required>
 
-                    <label>Nom</label>
+                    <label class="label_inscription">Nom</label>
                     <input type="text" name="nom" required>
 
-                    <label>Password</label>
+                    <label class="label_inscription">Password</label>
                     <input type="password" name="mdp" required>
 
-                    <label>Password confirmation</label>
+                    <label class="label_inscription">Password confirmation</label>
                     <input type="password" name="mdpval" required>
 
-                    <input class="mybutton" type="submit" value="S'INSCRIRE" name="valider">
+                    <input class="mybutton_inscription" type="submit" value="S'INSCRIRE" name="valider">
 
                 </form>
 

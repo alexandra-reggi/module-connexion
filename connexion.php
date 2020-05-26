@@ -17,8 +17,8 @@
                 <li><a href= "index.php"> Accueil</a></li>
                 <li><a href= "inscription.php"> Inscription</a></li>
                 <li><a id="color2" href= "connexion.php" >Connexion</a></li>
-                <li><a href= "admin.php"> Profil</a></li>
-                <li><a href= "profil.php"> Admin</a></li>
+                <li><a href= "profil.php"> Profil</a></li>
+                <li><a href= "admin.php"> Admin</a></li>
             </ul>
         </nav>
 
@@ -47,7 +47,7 @@ if (isset($_SESSION["login"]))
     <p>Bonjour <?php echo $_SESSION['login'] ?> vous êtes dejà connecté donc dejà inscrit.<br></p>
 
     <form action="index.php" method="post">
-        <input class="mybutton" name="deco" value="Deconnexion" type="submit"/>
+        <input class="mybutton_connexion" name="deco" value="Deconnexion" type="submit"/>
     </form>
 
     <?php
@@ -66,7 +66,7 @@ if (isset($_SESSION["login"]))
         <label>Password</label>
         <input type="text" name="password" required>
 
-        <input class="mybutton" type="submit" value="Connexion" name="valider">
+        <input class="mybutton_connexion" type="submit" value="Connexion" name="valider">
 
         </form>
 
@@ -102,7 +102,7 @@ if (isset($_POST['login']) && isset($_POST['password']))
         <label>Password</label>
         <input type="text" name="password" required>
 
-        <input class="mybutton" type="submit" value="Connexion" name="valider">
+        <input class="mybutton_connexion" type="submit" value="Connexion" name="valider">
 
         </form>
 
@@ -122,7 +122,7 @@ if (isset($_POST['login']) && isset($_POST['password']))
         <label>Password</label>
         <input type="text" name="password" required>
 
-        <input class="mybutton" type="submit" value="Connexion" name="valider">
+        <input class="mybutton_connexion" type="submit" value="Connexion" name="valider">
 
         </form>
 
