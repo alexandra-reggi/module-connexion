@@ -438,6 +438,7 @@ li a:hover{
 h3{
     margin-top: 91%;
 }
+
 #section_profil_gauche{
     margin-top: 1%;
     display: flex;
@@ -586,18 +587,22 @@ li a:hover{
 }
 
 #color5{
+    color: maroon;
 }
 
 #colorf5{
+    color: maroon;
 
 }
 
 #main_admin{
-
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #foot_admin{
-    margin-top: 9%;
+    margin-top:8%;
     background-color: cadetblue;
     box-shadow: 0px 9px 11px black;
     border: solid 1px;
@@ -606,4 +611,29 @@ li a:hover{
     display: flex;
     flex-direction: row;
 	justify-content: space-around; 
+}
+
+#img_papillon{
+    display: flex;
+    flex-direction: row;
+    width: 16%;
+    height: 3%;
+    margin-top: 2%;
+    margin-left: 69%;
+}
+
+#tableau{
+    font-size: x-large;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -4%;
+}
+
+th{
+    color: maroon;
+}
+
+td{
+    color: rgb(133, 65, 243);
 }

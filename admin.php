@@ -1,5 +1,8 @@
 <?php session_start();
 
+if ($_SESSION['login'] == "admin")
+{
+  
 $cnx = mysqli_connect("localhost", "root", "", "moduleconnexion");
 $requete1 = "SELECT * FROM utilisateurs";
 $query1 = mysqli_query($cnx, $requete1);
@@ -36,15 +39,17 @@ mysqli_close($cnx);
 
     <main id= "main_admin">
 
-        <section>
+    <img id="img_papillon" src="images/papillon.png">
+    
+    
+    <section id="tableau">
 
-        <?php
+<?php
 
 $i = 0;
 if (!empty($_SESSION['login'])) 
 {
-  if ($_SESSION['login'] == "admin") 
-  {
+  
     echo "<table border>";
     echo "<thead><tr>";
     $taille = sizeof($resultat) - 1;
@@ -71,31 +76,11 @@ if (!empty($_SESSION['login']))
   {
     echo "Vous n'avez pas accès à cette page.";
   }
-} 
-else 
-{
-  echo "Vous n'êtes pas connecté.";
-}
+ 
 
 ?>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </main>
@@ -114,5 +99,10 @@ else
     </footer>
     
 </body>
-
+<?php
+}
+else{
+ header("location:index.php");
+}
+?>
 </html>
