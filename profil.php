@@ -117,16 +117,19 @@
                             $pwdx = password_hash($_POST['passwordx'], PASSWORD_BCRYPT, array('cost' => 12));
                             $updatepwd = "UPDATE utilisateurs SET password = '$pwdx' WHERE id = '" . $resultat['id'] . "'";
                             $query2 = mysqli_query($connexion, $updatepwd);
-
-                            echo "votre mot de passe a bien ete modifier";
                            ?>
+                    <section id="h3_modif">
+                        <h3 class="h3_profil">votre mot de passe a bien ete modifier</h3>
                             <form action="index.php" method="post">
-                            <input class="mybutton" name="deco" value="Deconnexion" type="submit"/>
+                            <input id="mybutton_deco_prof" name="deco" value="Deconnexion" type="submit"/>
                             </form>
+                    </section>
+                            
                             <?php
                           }
                     }
     ?>
+    
       </section>
         
     <?php
@@ -135,7 +138,7 @@
     else 
     {
     ?>
-        <h3>Veuillez vous connecter pour accéder à votre page !</h3>
+        <h3 class="h3_profil">Veuillez vous connecter pour accéder à votre page !</h3>
     <?php
     }
 

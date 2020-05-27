@@ -136,7 +136,10 @@ a{
     font-size: larger;
 }
 
+
+
 /*-----------INSCRIPTION-------------*/
+
 
 
 body{
@@ -241,9 +244,6 @@ li a:hover{
     margin: 10px;
 }
 
-input:focus{
-	outline:none;
-}
 
 #foot_inscript{
     margin-top: 1%;
@@ -274,7 +274,10 @@ input:focus{
 }
 
 
+
 /*------------CONNEXION----------------*/
+
+
 
 body{
     background-color: bisque;
@@ -341,7 +344,6 @@ li a:hover{
     border-radius: 50px;
     padding: 15px;
     margin-left: 284px;
-    margin-top: 12%;
 }
 
 .input_connexion {
@@ -372,7 +374,7 @@ li a:hover{
 }
 
 #foot_connect{
-    margin-top: 8%;
+    margin-top: 7%;
     background-color: cadetblue;
     box-shadow: 0px 9px 11px black;
     border: solid 1px;
@@ -383,7 +385,11 @@ li a:hover{
 	justify-content: space-around;
 }
 
+
+
 /*---------------PROFIL-------------*/
+
+
 
 
 body{
@@ -429,14 +435,25 @@ li a:hover{
     color:yellow;
 }
 
+#main_connect{
+    margin-top: 12%;
+}
 #main_profil{
     display: flex;
     justify-content: center;
     flex-grow:1;
 }
 
-h3{
-    margin-top: 91%;
+.h3_profil{
+    margin-top: 92%;
+    margin-top: 92%;
+    color: yellow;
+    text-shadow: 2px 1px 1px black;
+}
+
+#h3_modif{
+    margin-top: 34%;
+    margin-left: 57%;
 }
 
 #section_profil_gauche{
@@ -454,7 +471,7 @@ h3{
     width: 25%;
     border-radius: 50px;
     padding: 15px;
-    margin-top: 12%;
+    margin-top: 27%;
 }
 
 #mybutton_profil_gauche{
@@ -468,7 +485,7 @@ h3{
     font-weight: bold;
     margin-top: 14px;
     background-color: rgb(250, 153, 178);
-    margin-left: 13%;
+    margin-left: 6%;
     padding-top: 7px;
     font-family: sans-serif;
 }
@@ -487,8 +504,10 @@ h3{
     width: 103%;
     border-radius: 50px;
     padding: 15px;
-    margin-top: 55%;
+    margin-top: 28%;
+    margin-left: -33%;
 }
+
 
 #mybutton_profil_droit{
     height: 37px;
@@ -501,7 +520,7 @@ h3{
     font-weight: bold;
     margin-top: 14px;
     background-color: rgb(250, 153, 178);
-    margin-left: 13%;
+    margin-left: 3%;
     padding-top: 7px;
     font-family: sans-serif;
 }
@@ -516,9 +535,7 @@ h3{
     margin: 10px;
 }
 
-#image_profil{
-    margin-right: 6%;
-}
+
 #image_profil {
     width: 18%;
     height: 5%;
@@ -526,14 +543,17 @@ h3{
     margin-left: -21%;
 }
 
-.label_droite{
-
-}
 
 .input_droit{
     border: dotted;
     padding: 10px 20px;
     margin: 10px;
+}
+
+#mybutton_deco_prof{
+    background-color: rgb(250, 153, 178);
+    border: 3px solid #eb6279;
+    color:white;
 }
 
 #foot_profil{
@@ -548,7 +568,10 @@ h3{
 	justify-content: space-around; 
 }
 
+
+
 /*---------------ADMIN-------------*/
+
 
 
 body{
@@ -592,7 +615,6 @@ li a:hover{
 
 #colorf5{
     color: maroon;
-
 }
 
 #main_admin{
@@ -602,7 +624,7 @@ li a:hover{
 }
 
 #foot_admin{
-    margin-top:8%;
+    margin-top:4%;
     background-color: cadetblue;
     box-shadow: 0px 9px 11px black;
     border: solid 1px;
@@ -618,7 +640,7 @@ li a:hover{
     flex-direction: row;
     width: 16%;
     height: 3%;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-left: 69%;
 }
 
@@ -637,3 +659,15 @@ th{
 td{
     color: rgb(133, 65, 243);
 }
+
+#mybutton_admin{
+    margin-top: 28%;
+    color: rgb(0, 217, 255);
+    font-size: large;
+    border-radius: inherit;
+    border-color: coral;
+    padding: 8px;
+    text-shadow: 1px 1px 1px black;
+}
+
+

@@ -72,21 +72,19 @@ if (!empty($_SESSION['login']))
 
     echo "</tbody></table>";
   } 
-  else 
-  {
-    echo "Vous n'avez pas accès à cette page.";
-  }
  
-
 ?>
 
-</section>
+    </section>
 
+            <form action="index.php" method="post">
+                <input id="mybutton_admin" name="deco" value="Deconnexion" type="submit"/>
+            </form>
 
-    </main>
+</main>
 
     <footer id= "foot_admin">
-<nav class="navfoot">
+        <nav class="navfoot">
             <a href="inscription.php">ACCUEIL</a>
             <a href="inscription.php">INSCRIPTION</a>
             <a href="connexion.php">CONNEXION</a>
@@ -99,10 +97,13 @@ if (!empty($_SESSION['login']))
     </footer>
     
 </body>
+
 <?php
 }
+
 else{
  header("location:index.php");
 }
 ?>
+
 </html>
