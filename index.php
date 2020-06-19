@@ -12,7 +12,9 @@
 
 <body>
 
-    <header>
+    <header>  
+        <!-- */faire une barre nav en php/* -->
+
 
         <nav>
             <ul>
@@ -47,14 +49,16 @@
 
             <?php
             date_default_timezone_set('Europe/Paris');
-            if(isset($_SESSION['login']))
+            if(isset($_SESSION['login'])) 
+            // Si la session est ouverte par quelqu_un
             {
             ?>
 
         </article>
 
 		<article class= 'text'>
-			<h2>Bonjour <?php echo $_SESSION["login"]?> et bienvenu sur mon site.</h1><br>
+            <h2>Bonjour <?php echo $_SESSION["login"]?> et bienvenu sur mon site.</h1><br> 
+            <!-- si c_est un inscrit son nom est reconnu*/ -->
 		</article>
 
 		<article class= "etoile">
@@ -66,16 +70,18 @@
             <p>Nous sommes le <?php echo date('d-m-Y')?> et il est <?php echo date('H:i:s')?></p>
                                
                 <?php 
-                    if($_SESSION['login'] == "admin")
+                    if($_SESSION['login'] == "admin") 
+                    // Si c_est l_admin
 				    {
                         echo "<p>Vous êtes connecté en tant qu'administrateur et vous avez accès à la page <a id=\"AD1\" href=\"admin.php\">ADMIN</a></p>";
                     }
-                            
+                                                        // ou sinon si c_est l_utilisteur*/
                     else
                     {
                         echo "<p>Vous êtes connecté en tant qu'utilisateur. Accédez à votre page de <a id=\"AD2\" href=\"profil.php\">PROFIL</a></p>";
                     }
-                ?>
+                ?>             
+                <!-- */du coup il leur faut à eux un bouton pour se deconnecté puisque le barre nav n-est pas PHP.../* -->
 
             <form action="index.php" method="post">
                 <input id="mybutton_index"  name="deco" value="Deconnexion" type="submit" />
@@ -87,7 +93,8 @@
             <?php
             }
             
-            else
+            else    
+            // */et si c_est un inconu...*/
             {
             ?>
             
@@ -99,7 +106,8 @@
 			<img class= "imgetoile" src= "images/etoilefilante.gif">
 		<article>
 
-            <?php
+            <?php  
+            // */à la fin dans tous les cas si le bouton deconnexion est cliqué la session est detruite*/
             }
 
             if (isset($_POST["deco"]))

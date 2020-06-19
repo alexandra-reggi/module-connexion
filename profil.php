@@ -39,7 +39,7 @@
         $query= mysqli_query($connexion, $requete);
         $resultat= mysqli_fetch_assoc($query);
     ?>
-
+                                                                                */on affiche le resultat dejà existant pour modifier */
         <form id="form_profil_gauche" action="profil.php" method="post">
             <label class="label_gauche">Login</label>
             <input type="text" name="login" value=<?php echo $resultat['login'];?>/>
@@ -52,7 +52,7 @@
         </form>
          
         <?php
-            if (isset($_POST['modifier']))
+            if (isset($_POST['modifier'])) */quand modif et cliqué tout rentre dans ses variables*/
             {
                 $login= $_POST["login"];
                 $prenom= $_POST["prenom"];
@@ -61,27 +61,27 @@
                 $req3 = mysqli_query($connexion, $req);
                 $veriflog = mysqli_fetch_all($req3);
 
-                if(!empty($veriflog))
+                if(!empty($veriflog))  */et on reverifie tout si pas de doublons si existe dejà avec "!"*/
                    {
                       echo "Login deja utilisé, requete refusé.<br>";
                    }
 
-               if(empty($veriflog))
+               if(empty($veriflog))  */sinon on readapte tout dans la bdd avec les nouvelles données*/ 
                    {
                        $updatelog = "UPDATE utilisateurs SET login ='" . $_POST['login'] . "' WHERE id = '" . $resultat['id'] . "'";
                        $querylog = mysqli_query($connexion, $updatelog); 
-                       $_SESSION['login']=$_POST['login'];
+                       $_SESSION['login']=$_POST['login'];                              */ici le login*/
                        header("Location:profil.php");  
                    }
 
-               if($resultat['prenom'] != $prenom )
+               if($resultat['prenom'] != $prenom )                                      */ici le prenom*/
                    {
                        $updateprenom = "UPDATE utilisateurs SET prenom ='" . $_POST['prenom'] . "' WHERE id = '" . $resultat['id'] . "'";
                        $queryprenom = mysqli_query($connexion, $updateprenom);
                        header("Location:profil.php");   
                    }
 
-               if($resultat['nom'] != $nom )
+               if($resultat['nom'] != $nom )                                            */le nom*/
                    {
                        $updatenom = "UPDATE utilisateurs SET nom ='" . $_POST['nom'] . "' WHERE id = '" . $resultat['id'] . "'";
                        $querynom = mysqli_query($connexion, $updatenom);
@@ -106,7 +106,7 @@
                 </form>
 
          <?php 
-                if (isset($_POST['modifier2'])) 
+                if (isset($_POST['modifier2']))  */pareil pour le formulaire nouveau pass*/
                     {
                        if ($_POST["passwordx"] != $_POST["passwordconf"]) 
                           {

@@ -52,8 +52,9 @@ if (isset($_SESSION["login"]))
 
     <?php
 }
-
+                            //    */OU*/                         */ET*/
     if ((!isset($_POST["login"]) || !isset($_POST["password"])) && (!isset($_SESSION["login"]))) 
+    // */si rien n_est remplis on met le formulaire*/
     {
       
     ?>
@@ -74,22 +75,27 @@ if (isset($_SESSION["login"]))
     }
 
 if (isset($_POST['login']) && isset($_POST['password'])) 
+// */lorsque le login et le password sont remplis*/
 {   
     
-    $requete2 = "SELECT * FROM utilisateurs WHERE login ='" . $_POST['login'] . "'";
+    $requete2 = "SELECT * FROM utilisateurs WHERE login ='" . $_POST['login'] . "'"; 
+    // */on consulte le login dans la bdd*/
     $query2 = mysqli_query($cnx, $requete2);
     $resultat = mysqli_fetch_array($query2);
 
 
     if (!empty($resultat)) 
+    // */si ça existe dans le bdd*/
     {
         if (password_verify($_POST['password'], $resultat['password'])) 
+        // si c_est le bon mot de passe*/
         {
-            $_SESSION['login'] = $_POST['login'];
+            $_SESSION['login'] = $_POST['login'];  
+            // */alors c ok on repart dirrect à l_index*/
             $_SESSION['password'] = $_POST['password'];
             header('Location:index.php');
         }
-
+                            //  */sinon, votre mot de passe est incorrect, on met le forme de connex*/
     else{
 ?>
         <p>Vôtre mot de passe est incorrect</p>
@@ -109,7 +115,8 @@ if (isset($_POST['login']) && isset($_POST['password']))
         <?php
         }   
     }    
-    else{
+    else{   
+        // */sinon*/
         ?>
 
         <p>Votre nom d'utilisateur n'est pas valide</p>
@@ -130,7 +137,8 @@ if (isset($_POST['login']) && isset($_POST['password']))
         }
     }
 
-mysqli_close($cnx);
+mysqli_close($cnx); 
+// */stop connexion*/
 
         ?>
 
