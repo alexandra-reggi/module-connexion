@@ -30,11 +30,11 @@
     <section id="main_inscription">
 
     <?php
-    if (isset($_SESSION["login"])) */toujours pareil si il est connu*/
+    if (isset($_SESSION["login"])) 
     {
     ?>
 
-        <p>Bonjour <?php echo $_SESSION['login'] ?> vous êtes dejà connecté.<br></p>
+        <p id="bjr_main_inscription">~ Bonjour <?php echo $_SESSION['login'] ?> vous êtes dejà connecté ~<br></p>
 
         <form action="index.php" method="post">
             <input class="mybutton_inscription" name="deco" value="Deconnexion" type="submit"/>
@@ -42,7 +42,7 @@
 
         <?php
     }
-        else                    */sinon il a un formulaire pour s_inscrire*/
+        else                    
         {
         ?>
 
@@ -74,29 +74,29 @@
         <?php
         }
         
-            if (isset($_POST["valider"]))  */une fois remplis, ici lorsqu_il est valider*/
+            if (isset($_POST["valider"]))  
             {
-            $login = $_POST["login"];               */tout devient les variable correspondante*/
+            $login = $_POST["login"];               
             $prenom = $_POST["prenom"];
             $nom = $_POST["nom"];
             $mdp = password_hash ($_POST["mdp"], PASSWORD_BCRYPT);
 
-            $connexion = mysqli_connect("localhost", "root", "","moduleconnexion");    */ se connecte à la base bdd et on verrifi tout*/
+            $connexion = mysqli_connect("localhost", "root", "","moduleconnexion");    
             $requete3 = "SELECT login FROM utilisateurs WHERE login = '$login'";
             $query3 = mysqli_query($connexion, $requete3);
             $resultat3 = mysqli_fetch_all($query3);
 
-            if (!empty($resultat3))       */si ce login n_existe pas dejà...*/
+            if (!empty($resultat3))       
             {
                 echo "Ce login est delà prit";
             }
 
-            elseif ($_POST["mdp"] != $_POST["mdpval"])  */si le mot de pass et le cconfirm sont bien identiques*/
+            elseif ($_POST["mdp"] != $_POST["mdpval"])  
             {
                 echo "Attention! Mot de passe différent";
             }
 
-            else                                        */et si tout va bien on Inserre tout dans la bdd*/
+            else                                       
             {
                 $requete = "INSERT INTO utilisateurs (login, prenom, nom, password) VALUE ('$login', '$prenom', '$nom', '$mdp')";
                 $query = mysqli_query($connexion, $requete);
@@ -126,12 +126,4 @@
 
 </html>
 
- */ Donc recap pour une inscription:
- - si la session est ouverte et que c'est un utilisteur on lui dit bonjour par son prenom et qu'il est dejà connecté;
- - sinon on affiche le formulaire d'inscription;
- - une fois rempli, lorsque le bouton valid et cliqué "if (isset($_POST["valider"]))",
- -tout devient leur variable,
- -on se connecte à la bdd,
- -on verrifi si login est unique,
- -si mdp et pareil que le confirm,
- -et si tout va bien on "INSER"tout dans la bdd./*
+ 

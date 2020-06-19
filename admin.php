@@ -1,13 +1,13 @@
 <?php session_start();
 
-if ($_SESSION['login'] == "admin") */si la connexion etait _admin*/
+if ($_SESSION['login'] == "admin") 
 {
   
-$cnx = mysqli_connect("localhost", "root", "", "moduleconnexion"); */on se connecte à la bdd*/
+$cnx = mysqli_connect("localhost", "root", "", "moduleconnexion"); 
 $requete1 = "SELECT * FROM utilisateurs";
 $query1 = mysqli_query($cnx, $requete1);
 $resultat = mysqli_fetch_all($query1, MYSQLI_ASSOC);
-mysqli_close($cnx); */fin*/
+mysqli_close($cnx); 
 
 ?>
 

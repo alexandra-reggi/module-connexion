@@ -24,9 +24,9 @@
 
     </header>
 
-<main>
+<main id= "main_connexion">
 
-    <section id="main_connect">
+    <section id="sect1_main_connection">
 
         <article>
             <img id="imgconnect" src="images/etoile.gif">
@@ -44,17 +44,21 @@ if (isset($_SESSION["login"]))
 {
 ?>
 
-    <p>Bonjour <?php echo $_SESSION['login'] ?> vous êtes dejà connecté donc dejà inscrit.<br></p>
+    <section id= "sect2_main_connexion">
 
-    <form action="index.php" method="post">
-        <input class="mybutton_connexion" name="deco" value="Deconnexion" type="submit"/>
-    </form>
+        <p id="message1_main_connexion">~ Bonjour <?php echo $_SESSION['login'] ?> vous êtes dejà connecté ~<br></p>
+
+        <form action="index.php" method="post">
+            <input class="mybutton_connexion" name="deco" value="Deconnexion" type="submit"/>
+        </form>
+
+    </section>
+
 
     <?php
 }
-                            //    */OU*/                         */ET*/
+                           
     if ((!isset($_POST["login"]) || !isset($_POST["password"])) && (!isset($_SESSION["login"]))) 
-    // */si rien n_est remplis on met le formulaire*/
     {
       
     ?>
@@ -75,9 +79,9 @@ if (isset($_SESSION["login"]))
     }
 
 if (isset($_POST['login']) && isset($_POST['password'])) 
-// */lorsque le login et le password sont remplis*/
+
 {   
-    
+
     $requete2 = "SELECT * FROM utilisateurs WHERE login ='" . $_POST['login'] . "'"; 
     // */on consulte le login dans la bdd*/
     $query2 = mysqli_query($cnx, $requete2);
@@ -85,17 +89,17 @@ if (isset($_POST['login']) && isset($_POST['password']))
 
 
     if (!empty($resultat)) 
-    // */si ça existe dans le bdd*/
+    
     {
         if (password_verify($_POST['password'], $resultat['password'])) 
-        // si c_est le bon mot de passe*/
+        
         {
             $_SESSION['login'] = $_POST['login'];  
-            // */alors c ok on repart dirrect à l_index*/
+           
             $_SESSION['password'] = $_POST['password'];
             header('Location:index.php');
         }
-                            //  */sinon, votre mot de passe est incorrect, on met le forme de connex*/
+                            
     else{
 ?>
         <p>Vôtre mot de passe est incorrect</p>
@@ -116,7 +120,7 @@ if (isset($_POST['login']) && isset($_POST['password']))
         }   
     }    
     else{   
-        // */sinon*/
+        
         ?>
 
         <p>Votre nom d'utilisateur n'est pas valide</p>
@@ -138,7 +142,7 @@ if (isset($_POST['login']) && isset($_POST['password']))
     }
 
 mysqli_close($cnx); 
-// */stop connexion*/
+
 
         ?>
 

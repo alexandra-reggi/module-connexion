@@ -80,7 +80,6 @@ li a:hover{
     margin-top: 14px;
     background-color: rgb(250, 153, 178);
     margin-left: 13%;
-    padding-top: 7px;
     font-family: sans-serif;
 }
 
@@ -186,9 +185,16 @@ li a:hover{
 }
 
 #main_inscription{
+    margin-bottom: 16%;
+    margin-top: 13%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#bjr_main_inscription{
+    font-size: 22px;
+    font-style: italic;
 }
 
 #titre_inscript{
@@ -231,7 +237,6 @@ li a:hover{
     margin-top: 14px;
     background-color: rgb(250, 153, 178);
     margin-left: 13%;
-    padding-top: 7px;
     font-family: sans-serif;
 }
 
@@ -322,10 +327,29 @@ li a:hover{
     zoom: 1.5;
 }
 
-#main_connect{
+#main_connexion{
+    margin-bottom: 8%;
+    margin-top: 16%;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+#sect1_main_connection{
+    margin-left: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+#sect2_main_connexion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#message1_main_connexion{
+    font-size: 22px;
+    font-style: italic;
 }
 
 #imgconnect{
@@ -340,10 +364,10 @@ li a:hover{
     flex-direction: column;
     text-align: center;
     font-size: 28px;
-    width: 13%;
+    width: 44%;
     border-radius: 50px;
     padding: 15px;
-    margin-left: 284px;
+    margin-left: 15%;
 }
 
 .input_connexion {
@@ -368,8 +392,7 @@ li a:hover{
     font-weight: bold;
     margin-top: 14px;
     background-color: rgb(250, 153, 178);
-    margin-left: 13%;
-    padding-top: 7px;
+    margin-left: 18%;
     font-family: sans-serif;
 }
 
@@ -439,20 +462,24 @@ li a:hover{
     margin-top: 12%;
 }
 #main_profil{
+    margin-bottom: -44px;
     display: flex;
     justify-content: center;
-    flex-grow:1;
 }
 
 .h3_profil{
-    margin-top: 92%;
-    margin-top: 92%;
+    border: solid 2px black;
+    padding: 6%;
+    text-align: center;
+    font-size: 23px;
+    margin-left: -155%;
+    margin-top: 268%;
     color: yellow;
     text-shadow: 2px 1px 1px black;
 }
 
 #h3_modif{
-    margin-top: 34%;
+    margin-top: 16%;
     margin-left: 57%;
 }
 
@@ -491,21 +518,21 @@ li a:hover{
 }
 
 #section_profil_droit{
+    margin-top: -14%;
 	display: flex;
     flex-direction: row;
 }
 
 #form_profil_droit{
+    margin-bottom: 47%;
     align-items: center;
     display: flex;
     flex-direction: column;
     text-align: center;
     font-size: 28px;
     width: 103%;
-    border-radius: 50px;
     padding: 15px;
-    margin-top: 28%;
-    margin-left: -33%;
+    margin-top: 119%;
 }
 
 
@@ -551,9 +578,19 @@ li a:hover{
 }
 
 #mybutton_deco_prof{
-    background-color: rgb(250, 153, 178);
+    height: 37px;
+    width: 143px;
     border: 3px solid #eb6279;
-    color:white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 14px;
+    background-color: rgb(250, 153, 178);
+    margin-left: -78%;
+    padding-top: 7px;
+    font-family: sans-serif;
 }
 
 #foot_profil{
