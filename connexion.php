@@ -78,7 +78,7 @@ if (isset($_SESSION["login"]))
 <?php
     }
 
-if (isset($_POST['login']) && isset($_POST['password'])) 
+if (isset($_POST['login']) && isset($_POST['password']))// */si un login et un password ont été postés*/ 
 
 {   
 
@@ -88,10 +88,10 @@ if (isset($_POST['login']) && isset($_POST['password']))
     $resultat = mysqli_fetch_array($query2);
 
 
-    if (!empty($resultat)) 
+    if (!empty($resultat))// */s'il n'est pas vide donc existant*/ 
     
     {
-        if (password_verify($_POST['password'], $resultat['password'])) 
+        if (password_verify($_POST['password'], $resultat['password']))//et si le password posté est bien le même que celui dans la bdd*/ 
         
         {
             $_SESSION['login'] = $_POST['login'];  

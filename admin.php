@@ -52,8 +52,8 @@ if (!empty($_SESSION['login']))
   
     echo "<table border>";
     echo "<thead><tr>";
-    $taille = sizeof($resultat) - 1;
-    foreach ($resultat[$taille] as $key => $value) 
+    $taille = sizeof($resultat)-1;
+    foreach ($resultat[$taille] as $key => $value)
     {
       echo "<th>{$key}</th>";
     }
